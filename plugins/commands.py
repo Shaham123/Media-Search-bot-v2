@@ -92,26 +92,22 @@ async def start(bot, cmd):
             )
         )
     else:
-        await cmd.reply_text(
-            START_MSG,
-            parse_mode="Markdown",
-            disable_web_page_preview=True,
+        await cmd.reply_photo(
+            photo="https://telegra.ph/file/3d14a978b8750ba0063b4.jpg",
+            caption=START_MSG,
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton("Search Here", switch_inline_query_current_chat=''),
-                        InlineKeyboardButton("Source Code", url='https://github.com/Jinn-Of-Telegram/Media-Search-bot-v2'),
+                        InlineKeyboardButton("😎ⓄⓌⓃⒺⓇ😎", url="https://t.me/ivar_bonel"),
+                        InlineKeyboardButton("♻️ⒼⓇⓄⓊⓅ♻️", url="https://t.me/malllumoviesgroups")
                     ],
-                   [
-                       InlineKeyboardButton("Update Channel", url='https://t.me/ErrorXbotz'),
-                       InlineKeyboardButton("Support Group", url='https://t.me/ErrorXsupport'),
-                    ],
-                     [
-                        InlineKeyboardButton("About", callback_data="about")
+                    [
+                        InlineKeyboardButton("⭕️𝙲𝙷𝙰𝙽𝙽𝙴𝙻⭕️", url="https://t.me/mainchannel12346"),
+                        InlineKeyboardButton("DOUBT 🧐", url="https://t.me/ivar_bonel"),
+                      ]
                     ]
-                ]
-            )
-        )
+                 )
+              )
 
 
 @Client.on_message(filters.command('channel') & filters.user(ADMINS))
